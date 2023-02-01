@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import { View, Text, SafeAreaView, StyleSheet, TouchableOpacity, Image, FlatList } from 'react-native'
-import { icons, images, SIZES, COLORS, FONTS } from '../constants'
+import { icons, SIZES, COLORS, FONTS } from '../constants'
 import { initialCurrentLocation, restaurantData, categoryData } from '../constants/data'
+import { Iprops } from './Restaurant'
+
 
 export interface InitialCurrentLocationProps {
   streetName: string;
@@ -43,7 +45,7 @@ export interface IRestaurantData {
 }
 
 
-export const Home = ({ navigation }: any) => {
+export const Home = ({ navigation }: Iprops) => {
   const [categories, setCategories] = useState<ICategoryData[]>(categoryData);
   const [selectedCategory, setSelectedCategory] = useState<{ id: number } | null>(null);
   const [restaurants, setRestaurants] = useState<IRestaurantData[]>(restaurantData);
