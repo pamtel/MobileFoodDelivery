@@ -2,8 +2,11 @@ import React, { useEffect, useState } from 'react'
 import { View, Text, Image, TouchableOpacity } from 'react-native'
 import MapView, { PROVIDER_GOOGLE, Marker } from 'react-native-maps'
 import MapViewDirections from "react-native-maps-directions"
-import { COLORS, FONTS, SIZES, GOOGLE_API_KEY, icons } from '../constants'
+import { COLORS, FONTS, SIZES, icons } from '../constants'
 import { Iprops } from './Restaurant'
+
+
+const GOOGLE_API_KEY = process.env.REACT_APP_WEATHER_API_KEY as string;
 
 export const OrderDelivery = ({ route, navigation }: Iprops) => {
   const mapView = React.useRef()
