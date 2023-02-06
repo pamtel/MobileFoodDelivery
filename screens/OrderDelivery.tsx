@@ -87,7 +87,7 @@ export const OrderDelivery = ({ route, navigation }: Iprops) => {
     return (
       <View style={{ flex: 1 }}>
         <MapView
-          // provider={PROVIDER_GOOGLE}
+          provider={PROVIDER_GOOGLE}
           initialRegion={region}
           style={{ flex: 1 }}
         >
