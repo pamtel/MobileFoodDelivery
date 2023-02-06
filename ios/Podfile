@@ -22,6 +22,12 @@ if linkage != nil
 end
 
 target 'FoodDelivery' do
+    # React Native Maps dependencies
+    pod 'react-native-maps', path: '../node_modules/react-native-maps'
+    pod 'react-native-google-maps', path: '../node_modules/react-native-maps'
+    pod 'GoogleMaps'
+    pod 'Google-Maps-iOS-Utils'
+    
   config = use_native_modules!
 
   # Flags change depending on the env values.
