@@ -18,7 +18,7 @@ interface IBottomTab {
 
 const Tab = createBottomTabNavigator()
 
-const TabBarCustomButton: React.FC<ITabBarCustomButton> = ({ accessibilityState, children, onPress }) => {
+const TabBarCustomButton: React.FC<ITabBarCustomButton> = ({ accessibilityState, children, onPress }): JSX.Element => {
   var isSelected = accessibilityState.selected
 
   if (isSelected) {

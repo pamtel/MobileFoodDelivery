@@ -25,7 +25,7 @@ interface IOrderItems {
   total: number
 }
 
-export const Restaurant = ({ route, navigation }: Iprops) => {
+export const Restaurant = ({ route, navigation }: Iprops): JSX.Element => {
   const scrollX = new Animated.Value(0)
   const [restaurant, setRestaurant] = useState<IRestaurantData | null>(null)
   const [currentLocation, setCurrentLocation] = useState<InitialCurrentLocationProps | null>(null)
@@ -86,7 +86,7 @@ export const Restaurant = ({ route, navigation }: Iprops) => {
     return total.toFixed(2)
   }
 
-  const renderHeader = () => {
+  const renderHeader = (): JSX.Element => {
     return (
       <View style={{ flexDirection: 'row' }}>
         <TouchableOpacity style={{
@@ -145,7 +145,7 @@ export const Restaurant = ({ route, navigation }: Iprops) => {
     )
   }
 
-  const renderFoodInfo = () => {
+  const renderFoodInfo = (): JSX.Element => {
     return (
       <Animated.ScrollView
         horizontal
@@ -289,7 +289,7 @@ export const Restaurant = ({ route, navigation }: Iprops) => {
     )
   }
 
-  const renderOrder = () => {
+  const renderOrder = (): JSX.Element => {
     return (
       <View>
         {renderDots()}

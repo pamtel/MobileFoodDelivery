@@ -6,9 +6,10 @@ import { COLORS, FONTS, SIZES, icons } from '../constants'
 import { Iprops } from './Restaurant'
 
 
-const GOOGLE_API_KEY = process.env.REACT_APP_WEATHER_API_KEY as string;
+const GOOGLE_API_KEY = process.env.REACT_APP_GOOGLE_MAPS_API_KEY as string;
+console.log(GOOGLE_API_KEY);
 
-export const OrderDelivery = ({ route, navigation }: Iprops) => {
+export const OrderDelivery = ({ route, navigation }: Iprops): JSX.Element => {
   const mapView = React.useRef()
 
   let { restaurant, currentLocation } = route.params;
@@ -30,7 +31,7 @@ export const OrderDelivery = ({ route, navigation }: Iprops) => {
 
   }, [])
 
-  const renderMap = () => {
+  const renderMap = (): JSX.Element => {
     const destinationMaker = () => {
       return (
         <Marker

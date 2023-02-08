@@ -45,7 +45,7 @@ export interface IRestaurantData {
 }
 
 
-export const Home = ({ navigation }: Iprops) => {
+export const Home = ({ navigation }: Iprops): JSX.Element => {
   const [categories, setCategories] = useState<ICategoryData[]>(categoryData);
   const [selectedCategory, setSelectedCategory] = useState<{ id: number } | null>(null);
   const [restaurants, setRestaurants] = useState<IRestaurantData[]>(restaurantData);
@@ -68,7 +68,7 @@ export const Home = ({ navigation }: Iprops) => {
     return ""
   }
 
-  const renderHeader = () => {
+  const renderHeader = (): JSX.Element => {
     return (
       <View style={{ flexDirection: 'row', height: 50 }}>
         <TouchableOpacity style={{ width: 50, paddingLeft: SIZES.padding * 2, justifyContent: 'center' }}>
@@ -95,7 +95,7 @@ export const Home = ({ navigation }: Iprops) => {
     )
   }
 
-  const renderMainCategories = () => {
+  const renderMainCategories = (): JSX.Element => {
     const renderItem = ({ item }: { item: ICategoryData }) => {
       return (
         <TouchableOpacity
@@ -149,7 +149,7 @@ export const Home = ({ navigation }: Iprops) => {
     )
   }
 
-  const renderRestaurantList = () => {
+  const renderRestaurantList = (): JSX.Element => {
     const renderItem = ({ item }: { item: IRestaurantData }) => (
       <TouchableOpacity
         style={{ marginBottom: SIZES.padding * 2 }}
